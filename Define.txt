@@ -1,0 +1,218 @@
+Library : Library are use to give feature to a particular website.
+Example of Library : GSAP it is a animation Library
+                    Lenis it is used for smooth scrolling.
+                    ReactJs it is used to build UI.
+
+
+
+Framework
+NextJS
+Angular
+
+
+// Import , Export//
+
+export are of two types.
+1. Named : when we use this then we should always import them in the {} with same name .
+2. Default : Here we can give any name to them and then console them.
+
+
+// Real DOM vs Virtual DOM //
+
+
+Real DOM : Real dom is the actual tree-like structure of HTML elements created by the browser for a web page.
+           It directly represent the UI on the screen
+           Any change in the Real DOM updates the UI immediately.
+           Updating it is slow, because the browser has to re-render the page.
+
+
+Virtural DOM : Virtual DOM is a lightweight JavaScript copy of the Real DOM used by libraries like React. 
+               It does not update the UI directly.
+               Changes are first made in the Virtual DOM.
+               Then only hte changed parts are updated in the Real DOM.
+               This makes updates faster and more efficient.
+
+
+// JSX //
+ JSX is a syntax extension of JavaScript used mainly with React to write HTML like code inside JavaScript.
+ Combines HTML + JavaScript logic in one place.
+ Makes components reusable.
+ Improves development speed.
+
+
+
+
+ // How to Create React Folder //
+
+ 1. npm create vite.
+ 2. project name.
+ 3. select framework.
+ 4. select variant.
+ 5. install npm 
+
+
+Use ctrl +C to stop the server.
+
+// To install Tailwind Css in system
+npm install tailwindcss @tailwindcss/vite
+
+// After installation we should have to past this in vite.config.js file
+import tailwindcss from '@tailwindcss/vite'
+
+// [tailwindcss() paste this in plugin of vite config]
+
+// paste this in index.css [@import "tailwindcss";]
+
+ // for Icon // visit --> Lucide React
+ npm install lucide-react --> To install this
+
+ for icon // visit --> remi icon
+ npm install remixicon
+import "remixicon/fonts/remixicon.css";
+
+ 
+//rafc//  ---> app.JSX
+//rafce // ---> component
+
+
+// CSS Part //
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html,
+body{
+  height: 100%;
+  width: 100%;
+}
+
+ // Props //
+Props are how data is passed from one component to another in React - usually form parent - child.
+Why do we need Props?
+To reuse components with different data.
+To make components dynamic.
+To follow React's one way data flow.
+
+// Hooks//
+Hooks are special functions in React that let you use state, lifecycle features, and other React capabilities inside functional components- no class components needed.
+
+
+1.Write cleaner code, & shorter code.
+2. Reuse logic easily (via custom hooks)
+3. Avoid complex class syntax (this, constructors, binding)
+
+
+// Commonly Used React Hooks //
+1. useState - State management---> Used to store and update data in a component.
+2. useEffect - Side effects ----> used for things like 1.API Calls,
+                                                       2. Timers
+                                                       3. DOM updates
+                                                       4. Subscriptions
+3. useContext - Global data sharing ---> Avoids prop drilling.
+4. useRef - Direct DOM access---> Used to access DOM elements or persist values without re-render.
+5. useMemo - Performance optimization ----> Prevents expensive recalculations.
+6. useCallback -Memoize function --> Prevents function recreation on re-renders.
+7. Custom Hooks ----> Create your own hooks to reuse logic.
+    (custom hooks must start with use)
+
+
+// Rule of Hooks //
+1. Call hooks only at the top level.
+2. Call hooks only inside React functions.
+3. Don't use hooks inside loops or conditions.
+                                                    
+
+
+
+                              // Local Storage //
+Local Storage is a web browser feature that allows you to store data on the user’s device (client-side).
+Local Storage lets you store data in the browser even after page refresh or browser restart.
+
+
+
+JSON.stringify(function_name) :- It is use to convert all value into string.
+localStorage.setItem('user', 'Ajay Shankar') :- use to set value.
+localStorage.removeItem():- use to delete specific storage.
+localStorage.clear(); :- use to clear all local storage.
+localStorage.getItem("name"); :- use to get the set data.
+
+JSON.parse():- to convert it again to the original value.
+
+
+
+                      // API //
+API (Application Programming Interface) is a way for two applications to communicate with each other.
+
+What is API Calling in React?
+Fetching data from a server and displaying it in your React app.
+
+
+Types of API Requests
+GET   ----- is used to Fetch data.
+POST  ------  is used to Send data.
+PUT  ------- is used to Update data.
+DELETE ----- is used to delete data.
+
+API Calling using Axios.
+command to install api 
+(npm install axios)
+
+
+                // useEffect Hook //
+useEffect is a React Hook used to handle side effects in functional components after rendering.
+
+
+What is Side Effects?
+side effects = operations that affect somethings outside React rendering.
+Examples: 
+* API calls,
+* Local Storage.
+* Timers
+* DOM updates
+* Event listeners.
+
+
+1. Run Only Once (On Mount)
+
+useEffect(() => {
+  console.log("Component Mounted");
+}, []);
+
+Empty array = runs only once
+
+📌 Use case:
+
+API call
+
+Initial setup
+
+2. Run on Every Render
+
+useEffect(() => {
+  console.log("Runs every render");
+});
+
+No dependency array.
+
+✅ 3. Run When Dependency Changes
+useEffect(() => {
+  console.log("Runs when count changes");
+}, [count]);
+
+Runs only when count changes.
+
+
+What is Axios?
+Axios is a promise-based HTTP Client for node.js and the browser. It is isomorphic (= it can run in the browser and node.js with the same codebase). On the server-side it uses the native node.js http module, while on the client (browser) it uses XMLHttpRequest.
+
+Features
+Make XMLHttpRequest from the browser
+Make http requests from node.js
+Supports the Promise API
+Intercept request and response
+Transform request and response data
+Cancel requests
+
+Installing :- npm install axios

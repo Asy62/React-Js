@@ -1,0 +1,19 @@
+/* Reset + default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page background */
+body {
+  background-color: #000;   /* black background */
+  color: #fff;              /* white text for readability */
+  font-family: Arial, sans-serif;
+}
+
+
+.nav{
+    background-color: blue;
+    color: aqua;
+}
